@@ -1,0 +1,55 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+User.create!({username: 'Todd'})
+User.create!({username: 'Woody'})
+User.create!({username: 'Ziyan'})
+User.create!({username: 'Kevin'})
+User.create!({username: 'David'})
+User.create!({username: 'Tommy'})
+User.create!({username: 'Ting Ting'})
+
+Poll.create!({author_id: 1, title: 'Puppy cafe or Kitty cafe?'})
+Poll.create!({author_id: 2, title: 'Cats are fun?'})
+Poll.create!({author_id: 3, title: 'Dogs are fun?'})
+Poll.create!({author_id: 2, title: 'Filing fun?'})
+Poll.create!({author_id: 1, title: 'Computers are fun?'})
+Poll.create!({author_id: 3, title: 'Ruby fun?'})
+Poll.create!({author_id: 4, title: 'What is fun?'})
+Poll.create!({author_id: 1, title: 'Fun'})
+
+Question.create!({text:'Why is this a poll?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'Is dora real?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'Have you filed your taxes?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'Who will be the next cheeto?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'WHY?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'HOW?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'PORQUE?', poll_id: (1..3).to_a.sample})
+Question.create!({text:'HEY WHAT?', poll_id: (1..3).to_a.sample})
+
+AnswerChoice.create!({text:'A?',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'B',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'C',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'D',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'E',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'F',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'H',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'L?',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'Z?',question_id: (1..3).to_a.sample})
+AnswerChoice.create!({text:'U?',question_id: (1..3).to_a.sample})
+
+Response.create!({user_id: 1,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id: 2,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id: 3,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id: 4,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id:4,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id:5,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id:6,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id:1,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id:3,answer_choice_id: (1..3).to_a.sample})
+Response.create!({user_id:2,answer_choice_id: (1..3).to_a.sample})
